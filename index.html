@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>YooToob</title>
+
+	<link href="styles/normalize.css" rel="stylesheet">
+	<link href="icons/font/css/open-iconic.css" rel="stylesheet">
+	<link rel="stylesheet" href="plugin/lib/ToggleSwitch.css">
+	
+	<link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+	 <link href="http://vjs.zencdn.net/6.2.8/video-js.css" rel="stylesheet">
+
+  <!-- If you'd like to support IE8 -->
+  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body>
+	<div id="side-menu-drawer">
+		<div id="overlay"></div>
+	<div id="side-menu">
+
+
+		<div id="side-content-container">
+		<div id="side-menu-header">
+			
+			<span class="menu-button oi " data-glyph="menu" aria-hidden="true"></span>
+			<div id="logo-container" class="">
+				<span class="oi" data-glyph="play-circle" aria-hidden="true"></span>
+				<span id="title">YooToob</span>
+			</div>
+			
+		</div>
+
+		
+		<div id="side-menu-items-container">
+		<div id="wrapper">
+		<div class="side-menu-item">
+			<div class="side-menu-icon-container">
+				<span class="oi" data-glyph="home"></span>
+			</div>
+			<div class="side-menu-option">
+				Home
+			</div>
+		</div>
+
+		<div class="side-menu-item">
+			<div class="side-menu-icon-container">
+				<span class="oi" data-glyph="fire"></span>
+			</div>
+			<div class="side-menu-option">
+				Trending
+			</div>
+		</div>
+
+		<div class="side-menu-item">
+			<div class="side-menu-icon-container">
+				<span class="oi" data-glyph="timer"></span>
+			</div>
+			<div class="side-menu-option">
+				History
+			</div>
+		</div>
+
+
+		<div class="side-menu-item">Best of YooToob</div>
+		<div class="side-menu-item">
+			<div class="side-menu-icon-container">
+				<span class="oi" data-glyph="musical-note"></span>
+			</div>
+			<div class="side-menu-option">
+				Music
+			</div>
+		</div>
+
+		<div class="side-menu-item">
+			<div class="side-menu-icon-container">
+				<span class="oi" data-glyph="puzzle-piece"></span>
+			</div>
+			<div class="side-menu-option">
+				Gaming
+			</div>
+		</div>
+
+		<div class="side-menu-item">
+			<div class="side-menu-icon-container">
+				<span class="oi" data-glyph="audio"></span>
+			</div>
+			<div class="side-menu-option">
+				Live
+			</div>
+		</div>
+
+		<div class="side-menu-item">
+			<div class="side-menu-icon-container">
+				<span class="oi" data-glyph="media-play"></span>
+			</div>
+			<div class="side-menu-option">
+				Spotlight
+			</div>
+		</div>
+
+		<div class="side-menu-item">
+			<div class="side-menu-icon-container">
+				<span class="oi" data-glyph="browser"></span>
+			</div>
+			<div class="side-menu-option">
+				News
+			</div>
+		</div>
+		<div id="side-menu-sign-in-cont" class="side-menu-item">
+			<div id="side-menu-blurb">Sign in now to see your channels and recommendations.</div>
+			<div id="side-menu-signin">Sign In</div>
+		</div>
+
+		<div class="side-menu-item">
+			<div class="side-menu-icon-container">
+				<span class="oi side-menu" data-glyph="play-circle"></span>
+			</div>
+			<div class="side-menu-option">
+				YooToob Red
+			</div>
+		</div>
+
+		<div class="side-menu-item">
+			<div class="side-menu-icon-container">
+				<span class="oi" data-glyph="cog"></span>
+			</div>
+			<div class="side-menu-option">
+				Settings
+			</div>
+		</div>
+
+		<div class="side-menu-item">
+			<div class="side-menu-icon-container">
+				<span class="oi" data-glyph="question-mark"></span>
+			</div>
+			<div class="side-menu-option">
+				Help
+			</div>
+		</div>
+
+
+
+		<div id="footer" ">
+			<div>About</div>
+			<div>Press</div>
+			<div>Copyright</div>
+			<div>Creators</div>
+			<div>Advertise</div>
+			<div>Developers</div>
+			<div>+YooToob</div>
+			
+
+		</div>
+		 
+
+		
+
+		
+	</div>
+	</div>
+
+
+</div>
+		
+
+	</div>
+</div>
+	<header>
+		<div class="head-container">
+			
+			<span id="back-button" class="oi mobile-menu mobile-search" data-glyph="arrow-thick-left" aria-hidden="true"></span>
+			<span class="menu-button oi mobile-menu" data-glyph="menu" aria-hidden="true"></span>
+			<div id="logo-container" class="mobile-menu">
+				<span class="oi" data-glyph="play-circle" aria-hidden="true"></span>
+				<span id="title">YooToob</span>
+			</div>
+
+
+				<div id="searchContainer" class="mobile-menu mobile-search">
+					<form id="search-form">
+						<input id="search-field" type="input" placeholder="search" />
+						<span id="search-icon" title="" class="oi" data-glyph="magnifying-glass" aria-hidden="true"></span>
+					</form>
+				</div>
+
+			<ul id="end-icons" class="mobile-menu">
+				<li  id="mobile-search-icon" class="oi "  title="" data-glyph="magnifying-glass" aria-hidden="true"></li>
+				<li id="upload-icon" class="oi" title="" data-glyph="data-transfer-upload" aria-hidden="true"></li>
+				<li id="apps-icon" class="oi" title="" data-glyph="grid-three-up" aria-hidden="true"></li>
+				<li id="ellipses" class="oi" title="" data-glyph="ellipses" aria-hidden="true"></li>
+				<li id="signin" class="oi">Sign In</li>
+				
+			</ul>
+		</div>
+	</header>
+	<div class="content">
+
+		<div class="othercontainer">
+		<div id="player">
+			 <video id="my-video" class="video-js" controls preload="auto" 
+  poster="assets/video/thumbnail.png" data-setup='{}'>
+    <source src="assets/video/tacobell.mp4" type='video/mp4'>
+    <source src="MY_VIDEO.webm" type='video/webm'>
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+
+		</div>
+
+		<div id="container">
+
+			<div id="container2">
+
+				<div id="related">
+				<div id="upNextAutoCont">
+					<div id="upNextCont">
+						Up next
+					</div>
+					<div id="autoPlayCont" title="">
+						<div id="autoplaylabel">Autoplay</div>
+							<div>
+								<input type="checkbox" name="switch" id="switch">
+							</div>
+
+					</div>
+					
+				</div>
+				<div id="relatedVideosCont" >
+					
+					
+					
+			
+
+				</div>
+				
+					<div id="show-more">
+						SHOW MORE	
+					</div>
+					<div id="loading-svg">
+						
+					</div>
+			</div>
+
+			<div id="playerpluscontent">
+				
+				<div id="description">
+					<div id="title">
+						Fiery Doritos Locos Tacos Eating Challenge @Hodgetwins			
+					</div>
+				</div>
+				<div id="info">
+					<div id="count">
+						<span class="menuText">5,000 Views</span>
+					</div>
+					<div id="menuContainer">
+						<div id="menu">
+							<div class="buttonContainer">
+								<div class="oi thumb like" data-glyph="thumb-up" title="" aria-hidden="true"></div>
+								<div class="menuText">12k</div>
+							</div>
+							<div class="buttonContainer">
+								<div class="oi thumb dislike" data-glyph="thumb-down" title="" aria-hidden="true"></div>
+								<div class="menuText">12k</div>
+							</div>
+
+							<div class="buttonContainer">
+								<div class="oi" data-glyph="share" aria-hidden="true"></div>
+								<div class="menuText">SHARE</div>
+							</div>
+							<div class="buttonContainer">
+								<div class="oi" data-glyph="plus" aria-hidden="true"></div>
+							</div>
+							<div class="buttonContainer">
+								<div class="oi" data-glyph="ellipses" aria-hidden="true"></div>
+							</div>
+						</div>
+						
+					</div>
+							
+
+
+				</div>
+				<div id="details">
+						<div id="dateUserSubContainer">
+							<div id="userImgNameDateCont">
+								<div id="userImgCont">
+									<div id="img"><span>HT</span></div>
+								</div>
+								<div id="userNameDateCont">
+									<div id="userName">
+										The HodgeTwins
+									</div>
+									<div id="datePublished">
+										Published on Sep 24, 2017
+									</div>
+								</div>
+							</div>
+							<div id="subscribeButtonCont">
+								<div id="subscribeButton">
+									<span>Subscribe <span id="subscribers">1.2M</span> </span>
+								</div>				
+
+							</div>
+						</div>
+						<div id="expander">
+						<div id="longDescription">
+							<p>Description</p>
+							<p>Lorem ipsum dolor sit amet</p>
+							<p>Lorem ipsum dolor sit amet</p>
+						<div id="show">
+							<p>Lorem ipsum dolor sit amet</p>
+							<p>Lorem ipsum dolor sit amet</p>
+							<p>Lorem ipsum dolor sit amet</p>
+							<p>Lorem ipsum dolor sit amet</p>
+							<p>Lorem ipsum dolor sit amet</p>
+							<p>Lorem ipsum dolor sit amet</p>
+						</div>
+						</div>
+								
+								
+
+								<div id="description-show-more">SHOW MORE</div>
+						
+						</div>
+						
+					</div>	
+			</div>
+			
+			<div class="commentSectionContainer">
+					<div class="commentsHeader">
+						<div class="number-sort-container">
+							<div class="number-comments">
+								121 comments
+							</div>
+							<div class="sort" title="" >
+								<span class="oi" data-glyph="align-left" aria-hidden="true"></span>
+								SORT BY
+							</div>
+						</div>
+						<div class="commentContainer">
+							<div id="userImgCont">
+								<div id="img"></div>
+								
+							</div>
+							<div class="input">
+								<form>
+									<input id="comment-field" placeholder="Add a public comment..." type="text" />
+								</form>
+							</div>
+						</div>
+						
+					</div>
+					<div id="commentsCont">
+						<div class="comment">
+							<div class="commentImgCont">
+								<div class="comment-user-img">
+										<span>UN</span>
+								</div>
+								
+							</div>
+							<div class="comment-user-time-comm-reply-cont">
+								<div class="comment-user-time-cont">
+									<div class="comment-user-name">User Name</div>
+									<div class="comment-time">20 hours ago</div>
+								</div>
+								<div class="comment-content">I want 20 tacos!</div>
+								<div class="comment-reply-cont">
+										<div class="reply-button">REPLY</div>
+										<div class="like-count">33</div>
+										<div class="comment-like-cont">
+											<div class="oi zero comment-thumb-up like" title="" data-glyph="thumb-up" aria-hidden="true"></div>
+											<div class="oi zero dislike" data-glyph="thumb-down" title="" aria-hidden="true"></div>
+											
+										</div>
+
+
+								
+								</div>
+							</div>
+						</div>
+					</div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+
+		</div>
+
+		</div>
+
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="plugin/lib/ToggleSwitch.js"></script>
+	<script src="http://vjs.zencdn.net/6.2.8/video.js"></script>
+	
+	<script src="js/template/RelatedVids.js"></script>	
+	<script src="js/related-ui.js"></script> 
+	<script>
+
+
+
+		$("#autoPlayCont").tooltip({
+			content: "When autoplay is enabled, the next video will automatically play next",
+			classes:{
+				"ui-tooltip": "ui-corner-all custom-gray"	
+			}
+		});
+
+		$("#search-icon").tooltip({
+			content: "Search",
+			classes:{
+				"ui-tooltip": "ui-corner-all custom-gray"	
+			}
+		});
+
+		$("#ellipses").tooltip({
+			content: "Settings",
+			classes:{
+				"ui-tooltip": "ui-corner-all custom-gray"
+			}
+		});
+
+		$("#upload-icon").tooltip({
+			content: "Upload",
+			classes:{
+				"ui-tooltip": "ui-corner-all custom-gray"
+			}
+		});
+
+		$("#apps-icon").tooltip({
+			content: "Apps",
+			classes:{
+				"ui-tooltip": "ui-corner-all custom-gray"
+			}
+		})
+
+		$(".sort").tooltip({
+			content: "Sort Comments",
+			classes:{
+				"ui-tooltip": "ui-corner-all custom-gray"	
+			}
+		});
+
+		$(".like").tooltip({
+			content: "Like",
+			classes:{
+				"ui-tooltip": "ui-corner-all custom-gray"
+			}
+		});
+
+
+
+		$(".dislike").tooltip({
+			content: "Dislike",
+			classes:{
+				"ui-tooltip": "ui-corner-all custom-gray",
+
+			}
+		});
+
+		
+
+
+
+
+
+	var thumbnails = [
+
+							{title: "Video 1", image: "assets/images/one.jpg"},
+							{title: "Video 2", image: "assets/images/two.jpg"},
+							{title: "Video 3", image: "assets/images/three.jpg"},
+							{title: "Video 4", image: "assets/images/four.jpg"},
+							{title: "Video 5", image: "assets/images/five.jpg"},
+							{title: "Video 6", image: "assets/images/six.jpg"},
+							{title: "Video 7", image: "assets/images/seven.jpg"},
+							{title: "Video 8", image: "assets/images/eight.jpg"},
+							{title: "Video 9", image: "assets/images/six.jpg"},
+							{title: "Video 10", image: "assets/images/seven.jpg"},
+							{title: "Video 11", image: "assets/images/eight.jpg"},
+							{title: "Video 12", image: "assets/images/one.jpg"},
+							{title: "Video 13", image: "assets/images/two.jpg"},
+							{title: "Video 14", image: "assets/images/three.jpg"},
+							{title: "Video 15", image: "assets/images/four.jpg"},
+							{title: "Video 16", image: "assets/images/five.jpg"},
+							{title: "Video 17", image: "assets/images/six.jpg"},
+							{title: "Video 18", image: "assets/images/seven.jpg"},
+							{title: "Video 19", image: "assets/images/eight.jpg"},
+							{title: "Video 20", image: "assets/images/six.jpg"},
+							{title: "Video 21", image: "assets/images/seven.jpg"},
+							{title: "Video 22", image: "assets/images/one.jpg"},
+							{title: "Video 23", image: "assets/images/two.jpg"},
+							{title: "Video 24", image: "assets/images/three.jpg"},
+							{title: "Video 25", image: "assets/images/four.jpg"},
+							{title: "Video 26", image: "assets/images/five.jpg"},
+							{title: "Video 27", image: "assets/images/six.jpg"},
+							{title: "Video 28", image: "assets/images/seven.jpg"},
+							{title: "Video 29", image: "assets/images/eight.jpg"},
+							{title: "Video 30", image: "assets/images/six.jpg"},
+							{title: "Video 31", image: "assets/images/seven.jpg"},
+							
+
+							];
+
+
+
+	var lll = new RelatedVids(thumbnails);
+	
+	relatedUI.displayInitialThumbnails();
+
+
+
+	$("#description-show-more").click(function(){
+		$("#show").toggleClass("show");
+		if($(this).text()==="SHOW MORE"){
+			$(this).text("SHOW LESS");
+		} else{
+			$(this).text("SHOW MORE");
+		}
+	});
+
+
+	$(".menu-button").click(function(){
+			
+			$("#side-menu-drawer").toggleClass("visible");
+
+			if(!$("#side-menu-drawer").hasClass("visible")){
+					
+					$("#side-menu").removeClass("menu-open")
+					$("#side-menu").addClass("menu-close");
+
+
+					$("#overlay").click(function(){
+
+						$("#side-menu-drawer").removeClass('visible');
+						$("#side-menu").removeClass("menu-open")
+						$("#side-menu").addClass("menu-close");
+
+					});
+
+
+				} else {
+
+					$("#side-menu").removeClass("menu-close")
+					$("#side-menu").addClass("menu-open");
+
+					$("#overlay").click(function(){
+
+						$("#side-menu-drawer").removeClass('visible');
+						$("#side-menu").removeClass("menu-open")
+						$("#side-menu").addClass("menu-close");
+
+					});
+
+				}
+
+
+			if($("#side-menu-drawer").hasClass('visible')){
+
+			
+
+	}
+
+
+		});
+
+
+
+		
+		$("#switch").toggleSwitch();
+
+		$(".onoffswitch-label").click(function(){
+			var $switch = $("#switch");
+			if ($switch.prop("checked")){
+				console.log("it's checked")
+			} else {
+				console.log("it's not checked");
+			} 
+
+
+		});
+
+		$("#mobile-search-icon").click(function(){
+
+			$(".mobile-menu").each(function(index){
+
+				if($(this).css("display")=="flex"){
+
+					$(this).addClass("mobile-search");
+			
+				} else if ($(this).hasClass("mobile-search")){
+
+					$(this).removeClass('mobile-search');
+
+				} else{
+			
+					$(this).addClass('mobile-search');
+			
+				}
+
+			});
+			
+			
+			
+
+		});
+
+		$("#back-button").click(function(){
+
+			$(".mobile-menu").each(function(index){
+
+				if($(this).hasClass("mobile-search")){
+				
+					$(this).removeClass('mobile-search');
+				
+				} else if(!$(this).hasClass("mobile-search")){
+
+					$(this).addClass("mobile-search");
+
+				 }// else{
+				
+				// 	$(this).css("display", "flex");
+				
+				// }
+
+				// $("#back-button").hide();
+			// $("#searchContainer").hide();
+		});
+		});
+
+
+		 
+			
+
+		 ( function() {
+
+
+		 		var availableTags = [
+			      "Apple", 
+			      "Ball",
+			      "Biscuits", 
+			      "Cat", 
+			      "Dog", 
+			      "Exercise", 
+			      "Fitness", 
+			      "Google", 
+			      "Hodgetwins", 
+			      "Igloo", 
+			      "JavaScript", 
+			      "Kayak",
+			      "Lemon",
+			      "Money",
+			      "Mustard",
+			      "Naranja",
+			      "Nuggets",
+			      "Open",
+			      "Oreja",
+			      "Pie",
+			      "Questions",
+			      "Restroom",
+			      "Stove",
+			      "Thunder",
+			      "Uvula",
+			      "Videos",
+			      "Wrench",
+			      "Xylophone",
+			      "YooToob",
+			      "Zebra"
+
+			    ];
+			    
+
+			   
+			    $("#search-field").autocomplete({
+			      source: availableTags,
+			      appendTo: "header"
+			  });
+
+
+
+  })();
+
+
+	
+
+
+		 		
+
+
+
+	
+
+
+	
+ 
+
+	
+
+
+	
+
+	</script>
+</body>
+</html>
